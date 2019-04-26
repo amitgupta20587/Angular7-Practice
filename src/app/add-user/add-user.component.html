@@ -1,0 +1,49 @@
+<h1>Add User</h1>
+
+<form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+
+    <h5 *ngIf="success" class="success_msg">Congarts, your data has been successfully submitted.</h5>
+
+    <label>
+        Name : <input type="text" formControlName = "name" [ngClass]="{ 'is-invalid': submitted && addUserForm.controls.name.errors }">
+        <div *ngIf="submitted && addUserForm.controls.name.errors" class="error">
+            <div *ngIf="addUserForm.controls.name.errors.required">
+                Please enter the name
+            </div>
+        </div>
+    </label>
+    <label>
+        Email : <input type="text" formControlName = "email" [ngClass]="{ 'is-invalid': submitted && addUserForm.controls.email.errors }">
+        <div *ngIf="submitted && addUserForm.controls.email.errors" class="error">
+            <div *ngIf="addUserForm.controls.email.errors.required">
+                Please enter the email
+            </div>
+            <div *ngIf="addUserForm.controls.email.errors.email">
+                Email must be a valid email address
+            </div>
+        </div>
+    </label>
+    <label>
+        Website : <input type="text" formControlName = "website" [ngClass]="{ 'is-invalid': submitted && addUserForm.controls.website.errors }">
+        <div *ngIf="submitted && addUserForm.controls.website.errors" class="error">
+            <div *ngIf="addUserForm.controls.website.errors.required">
+                Please enter the website URL
+            </div>
+        </div>
+    </label>
+
+    <input type="submit" value="Add User" class="cta">
+</form>
+
+<div *ngIf="submitted" class="results">
+    <strong>Name:</strong>
+    <span>{{ addUserForm.controls.name.value }}</span>
+
+    <strong>Email:</strong>
+    <span>{{ addUserForm.controls.email.value }}</span>
+
+    <strong>Website:</strong>
+    <span>{{ addUserForm.controls.website.value }}</span>
+</div>
+
+

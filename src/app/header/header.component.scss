@@ -1,0 +1,15 @@
+.header {
+    background-color: #414141;
+    color: #fff;
+    .heading {
+        display: inline-block;
+        width: 80%;
+
+        h1 {
+            padding: 0 30px;
+        }
+    }
+    .mode_switch {
+        display: inline;
+    }
+}

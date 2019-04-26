@@ -1,0 +1,13 @@
+<h1>Albums</h1>
+
+<ul [@listStagger]="photos$">
+  <li *ngFor='let photo of photos$'>
+
+    <ul>
+      <li>{{ photo.title }}</li>
+      <li>{{ photo.thumbnailUrl }}</li>
+      <img src="{{photo.url}}" height="30px" width="30px"/>
+    </ul>
+  </li>
+</ul>
+<ngx-spinner></ngx-spinner>

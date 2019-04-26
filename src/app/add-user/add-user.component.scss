@@ -1,0 +1,61 @@
+.success_msg{
+    background: #00a8ff;
+    width: 350px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    
+    input, textarea {
+        display: block;
+        width: 300px;
+        margin-bottom: 10px;
+        padding: 1em;
+        margin-top: 10px;
+
+        
+    }
+    .is-invalid {
+        border: 1px solid red;
+    }
+
+    .error {
+        margin-top: -20px;
+        color: red;
+        padding: .5em 0;
+        display: inline-block;
+        font-size: .9em;
+    }
+}
+
+.cta {
+    background: #000;
+    border: none;
+    color: white;
+
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.results {
+    margin-top: 50px;
+
+    strong {
+        display: block;
+    }
+    span {
+        margin-bottom: 20px;
+        display: block;
+    }
+}
